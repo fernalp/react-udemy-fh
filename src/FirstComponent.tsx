@@ -11,7 +11,7 @@ type PropsFirstComponent = {
 export const FirstComponent = ({ title, subTitle, name }: PropsFirstComponent) => {
   return (
     <>
-      <h1>{title}</h1>
+      <h1 data-testid="test-title" >{title}</h1>
       <p>{subTitle / 2}</p>
       <p>{name}</p>
       <div>FirstComponent</div>

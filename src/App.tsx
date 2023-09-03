@@ -1,14 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
+import Footer from './Components/Footer/Footer'
+import { Header } from './Components/Header/Header'
+import Counter from './Components/Counter/Counter'
+import List from './Components/List/List'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,7 +31,13 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
+      <Header title='Title desde props'> Yo soy el Hijo </Header>
+      <Counter setCount={setCount}>Counter is {count}</Counter>
+      <List items={["Cofee", "Steak", "Code"]} render={
+        (item: string) => (<span className='gold'>{item}</span>)
+      } />
+      <Footer business='IngBio' />
     </>
   )
 }
